@@ -1,0 +1,27 @@
+{% extends 'ProyectoWebApp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    {% for servicio in servicios %}
+     <!-- Heading -->
+     <title> Servicios </title>
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{servicio.imagen.url}}" alt="" style="width: 30%;">
+        <div class="intro-text left-0 text-left bg-faded p-4 rounded">
+          <h2 class="section-heading mb-1" >
+            <span class="section-heading-upper">Nombre servicio: {{servicio.titulo}}</span>
+            <span class="section-heading-upper">Descripción: {{servicio.contenido}}</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+</section>
+
+    
+
+    {% endfor %}
+  
+{% endblock %}
